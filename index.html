@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portifólio Pessoal | Luiza Rocha</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="fundodapaginainicial">
+
+
+        <header id="header">
+            <div id="curriculo">
+                <div>
+                    <a href="Currículo Luiza.pdf" download class="curriculo-link">
+                        <span class="curriculo-icon"></span>
+                        <span class="curriculo-text">Currículo</span>
+                    </a>
+                </div>
+            </div>
+            <div id="conteudo">
+                <label class="switch">
+                    <input type="checkbox" />
+                    <span class="slider"></span>
+                </label>
+
+                <div>
+                    <img src="assets/Design sem nome (8).png" alt="">
+                </div>
+                <!-- Sumario -->
+                <div id="sumario">
+                    <a href="#PaginaSobreMim" class="text-hover-effect-1">
+                        Sobre Mim
+                    </a>
+                    <div class="text-hover-effect-1">
+                        Skills
+                    </div>
+                    <div class="text-hover-effect-1">
+                        Projetos
+                    </div>
+                    <div class="text-hover-effect-1">
+                        Contato
+                    </div>
+                </div>
+        </header>
+
+        <div id="souluizarocha">
+            <span class="souluiza">Sou luiza rocha</span>
+        </div>
+        <div id="lenhadev">
+            <div class="linha"></div>
+            <span class="dev">Desenvolvedora</span>
+        </div>
+        <div id="buttondedescer">
+            <a href="#PaginaSobreMim">
+                <button class="button">
+                    <svg class="svg" xmlns="http://www.w3.org/2000/svg" height="25px" viewBox="0 -960 960 960"
+                        width="25px" fill="#000000">
+                        <path d="M440-160v-487L216-423l-56-57 320-320 320 320-56 57-224-224v487h-80Z"></path>
+                    </svg>
+                </button>
+            </a>
+        </div>
+
+    </div>
+
+    <div id="PaginaSobreMim">
+        <div id="gradienta">
+            <div id="minhafoto">
+                <img class="foto" src="assets/Design sem nome (6) 1.png" alt="">
+            </div>
+            <div id="sobre">
+                <span class="mim">Sobre Mim</span>
+            </div>
+            <div id="textinho">
+                <span class="textinhodotextinho">Sou Luiza Rocha, apaixonada por tecnologia e desenvolvimento web. Tenho interesse em criar soluções digitais eficientes, funcionais e com design intuitivo, sempre buscando unir inovação e qualidade. Meu foco é transformar ideias em projetos reais, utilizando as melhores práticas de programação e explorando constantemente novas ferramentas e linguagens.</span>
+                <span class="textinhodotextinho2">Acredito que a tecnologia pode melhorar vidas e meu objetivo é contribuir com projetos que causem impacto positivo, sempre aprendendo e evoluindo junto com o mercado.</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="PaginaSkills">
+        
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            const textoSouLuiza = document.querySelector('.souluiza');
+            const textoOriginal = textoSouLuiza.textContent;
+            const letras = textoOriginal.split('');
+
+            textoSouLuiza.textContent = '';
+
+            letras.forEach(letra => {
+                const span = document.createElement('span');
+                span.style.display = 'inline-block';
+                
+                if (letra === ' ') {
+                    span.innerHTML = '&nbsp;';
+                } else {
+                    span.textContent = letra;
+                }
+
+                textoSouLuiza.appendChild(span);
+            });
+        });
+    </script>
+
+</body>
+
+</html>
